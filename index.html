@@ -20,7 +20,7 @@
     }
 
     .image-filter {
-      filter: grayscale(0.95);
+      filter: grayscale(1);
       transition: filter 0.2s ease-in-out;
     }
 
@@ -282,15 +282,22 @@
   </section>
 
   <!-- Professional Values, Approach & Expertise Section -->
-  <section class="bg-white text-gray-900 min-h-screen flex items-center px-6 py-16">
-    <div class="max-w-7xl mx-auto w-full">
-      <h2 class="text-4xl font-bold mb-10 text-center">My Professional Values, Approach & Expertise</h2>
+  <section class="relative min-h-screen flex items-center px-6 py-24 bg-fixed bg-center bg-cover text-white"
+    style="background-image: url('zanzibar.jpg'); filter: grayscale(95%);">
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-85"></div>
+
+    <!-- Content Container -->
+    <div class="relative max-w-7xl mx-auto w-full z-10">
+      <h2 class="text-4xl font-bold mb-16 text-center">
+        My Professional Values, Approach &amp; Expertise
+      </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- Column 1: Values -->
         <div>
-          <h3 class="text-2xl font-semibold mb-4">I Value:</h3>
-          <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <h3 class="text-3xl font-semibold mb-8">I Value:</h3>
+          <ul class="list-disc list-inside space-y-2">
             <li>Open-door communication</li>
             <li>Supportive culture with open feedback</li>
             <li>Environment that fosters continuous learning &amp; growth</li>
@@ -302,8 +309,8 @@
 
         <!-- Column 2: What I Bring -->
         <div>
-          <h3 class="text-2xl font-semibold mb-4">What I Bring:</h3>
-          <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <h3 class="text-3xl font-semibold mb-8">What I Bring:</h3>
+          <ul class="list-disc list-inside space-y-2">
             <li>Full ownership from design to delivery</li>
             <li>Proactive approach—no “not my job” mentality</li>
             <li>Knowledge sharing, mentoring, and team learning</li>
@@ -314,8 +321,8 @@
 
         <!-- Column 3: What I Can Do -->
         <div>
-          <h3 class="text-2xl font-semibold mb-4">What I can:</h3>
-          <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <h3 class="text-3xl font-semibold mb-8">What I Can:</h3>
+          <ul class="list-disc list-inside space-y-2">
             <li>Translating business requirements into technical</li>
             <li>Task decomposition, estimation, and prioritization</li>
             <li>Documentation &amp; building workflows</li>
@@ -326,13 +333,11 @@
             <li>Test coverage (unit, integration, e2e)</li>
             <li>Code reviews &amp; optimization</li>
             <li>Mentoring &amp; conducting interviews/assessments</li>
-            <!-- Add more as needed -->
           </ul>
         </div>
       </div>
     </div>
   </section>
-
 
 </body>
 

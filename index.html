@@ -18,6 +18,15 @@
       pointer-events: none;
       /* Ensures it doesn’t interfere with interactions */
     }
+
+    .image-filter {
+      filter: grayscale(0.95);
+      transition: filter 0.2s ease-in-out;
+    }
+
+    .image-filter:hover {
+      filter: none;
+    }
   </style>
 </head>
 
@@ -52,7 +61,7 @@
         <span class="text-lg opacity-80 tracking-wide">Scroll down</span>
         <svg class="w-8 h-8 mt-3 animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
           stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </div>
     </div>
@@ -161,50 +170,101 @@
 
   <!-- Interests / Hobbies Section -->
   <section class="bg-gray-100 text-gray-900 py-16 px-4 sm:px-6 md:px-8">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl font-bold mb-4 text-center">My Interests Beyond Work</h2>
+    <div class="max-w-7xl mx-auto md:grid md:grid-cols-2 md:gap-8">
 
-      <!-- Short Intro Text -->
-      <p class="leading-snug tracking-wide text-gray-700 text-center mb-10 max-w-2xl mx-auto">
-        I love exploring new things: building side projects, traveling the world,
-        jamming on the bass guitar, attending concerts and festivals, hitting the slopes,
-        and even taking flying lessons. In short, I’m all about trying new tech and
-        adventures wherever I go.
-      </p>
-
-      <!-- Masonry Gallery using CSS columns -->
-      <div class="columns-2 md:columns-3 gap-4">
-        <!-- Image #1 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="surfing.jpg" alt="Surfing" class="w-full h-auto block" />
+      <div>
+        <div class="grid grid-cols-2 grid-rows-2 gap-4 mb-8">
+          <!-- Tall image spanning two rows -->
+          <div class="relative col-span-1 row-span-2 overflow-hidden">
+            <a href="bass.png" target="_blank">
+              <img src="bass.png" alt="Playing bass guitar in a punk band"
+                class="image-filter object-cover w-full h-full" />
+            </a>
+          </div>
+          <!-- Top-right image -->
+          <div class="relative col-span-1 row-span-1 overflow-hidden">
+            <a href="aviation.jpg" target="_blank">
+              <img src="aviation.jpg" alt="Taking airplane pilot lessons"
+                class="image-filter object-cover w-full h-full" />
+            </a>
+          </div>
+          <!-- Bottom-right image -->
+          <div class="relative col-span-1 row-span-1 overflow-hidden">
+            <a href="tech.jpg" target="_blank">
+              <img src="tech.jpg" alt="Tinkering with electronics and repairs"
+                class="image-filter object-cover w-full h-full" />
+            </a>
+          </div>
         </div>
-        <!-- Image #2 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="zanzibar.jpg" alt="Traveling" class="w-full h-auto block" />
-        </div>
-        <!-- Image #3 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="egypt.jpg" alt="Playing bass guitar in a punk band" class="w-full h-auto block" />
-        </div>
-        <!-- Image #4 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="skiing.jpg" alt="Skiing" class="w-full h-auto block" />
-        </div>
-        <!-- Image #5 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="bass.png" alt="Concerts and music festivals" class="w-full h-auto block" />
-        </div>
-        <!-- Image #6 -->
-        <div class="mb-4 break-inside-avoid">
-          <img src="aviation.jpg" alt="Aviation and flying lessons" class="w-full h-auto block" />
-        </div>
-        <!-- ...Add as many images as you want -->
       </div>
 
-    </div>
+      <div class="flex items-center mt-12 md:mt-0">
+        <div>
+          <h2 class="text-4xl font-bold mb-6">My Interests Beyond Work</h2>
+          <ul class="space-y-5 text-gray-700 text-lg md:text-xl leading-relaxed">
+            <!-- 1: Programming -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-code w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Programming:</strong> Writing scripts for parsing data,
+                exploring new technologies in personal projects, and automating tasks.
+              </span>
+            </li>
+
+            <!-- 2: Traveling -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-globe w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Traveling:</strong> Exploring different countries and new cultures.
+              </span>
+            </li>
+
+            <!-- 3: Music -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-music w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Music:</strong> I play bass guitar in a punk band in Munich.
+              </span>
+            </li>
+
+            <!-- 4: Concerts -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-microphone w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Concerts:</strong> I attend many concerts and music festivals.
+              </span>
+            </li>
+
+            <!-- 5: Winter Sports / Surfing / Skateboarding / Hiking -->
+            <li class="flex items-start">
+              <!-- For winter sports, there's fa-skiing or fa-snowboarding in FA Free 6.x -->
+              <i class="fa-solid fa-skiing w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Winter Sports / Surfing / Skateboarding / Hiking:</strong>
+                I’m always up for something active and outdoors.
+              </span>
+            </li>
+
+            <!-- 6: Aviation -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-plane w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>Aviation:</strong> I've taken airplane pilot lessons and love flying.
+              </span>
+            </li>
+
+            <!-- 7: All Things Tech -->
+            <li class="flex items-start">
+              <i class="fa-solid fa-microchip w-7 h-7 text-black mr-3 flex-shrink-0"></i>
+              <span>
+                <strong>All Things Tech:</strong> I love soldering, fixing, or repairing any gadgets I can.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- /md:grid -->
   </section>
-
-
 </body>
 
 </html>

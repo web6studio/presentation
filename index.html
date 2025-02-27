@@ -33,10 +33,10 @@
 
 </head>
 
-<body class="bg-gray-900 text-white font-[Open_Sans]">
+<body class="font-[Open_Sans]">
 
   <!-- Hero Section -->
-  <section class="relative w-full h-screen bg-cover bg-center vignette"
+  <section class="relative text-white w-full h-screen bg-cover bg-center vignette"
     style="background-image: url('./cockpit-it-office.jpeg'); filter: grayscale(100%);">
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-70"></div>
@@ -48,7 +48,7 @@
         years exp)</p>
       <div class="flex items-center mt-10 space-x-3">
         <svg class="w-7 h-7 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke="currentColor">
+          stroke="#fff">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -202,8 +202,8 @@
       <!-- Right Column -->
       <div class="flex items-baseline">
         <div>
-          <h2 class="text-4xl font-bold mb-6">My Interests Beyond Work</h2>
-          <ul class="space-y-6 text-gray-700 text-lg md:text-xl leading-relaxed">
+          <h2 class="text-4xl font-bold mb-8">My Interests Beyond Work</h2>
+          <ul class="space-y-5 text-gray-700 text-lg md:text-xl leading-relaxed">
             <!-- 1: Programming -->
             <li class="flex items-baseline">
               <span class="material-icons md-36 text-black mr-3 flex-shrink-0 relative -bottom-1">
@@ -282,7 +282,7 @@
   </section>
 
   <!-- Professional Values, Approach & Expertise Section -->
-  <section class="relative min-h-screen flex items-center px-6 py-24 bg-fixed bg-center bg-cover text-white"
+  <section class="relative min-h-screen flex items-center px-8 py-24 bg-fixed bg-center bg-cover text-white"
     style="background-image: url('zanzibar.jpg'); filter: grayscale(95%);">
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-85"></div>
@@ -316,12 +316,13 @@
             <li>Knowledge sharing, mentoring, and team learning</li>
             <li>Honesty, openness, and enthusiasm</li>
             <li>Creativity and effective brainstorming</li>
+            <li>I simplify complex ideas and processes into manageable solutions</li>
           </ul>
         </div>
 
         <!-- Column 3: What I Can Do -->
         <div>
-          <h3 class="text-3xl font-semibold mb-8">What I Can:</h3>
+          <h3 class="text-3xl font-semibold mb-8">Areas of Expertise:</h3>
           <ul class="list-disc list-inside space-y-2">
             <li>Translating business requirements into technical</li>
             <li>Task decomposition, estimation, and prioritization</li>
@@ -336,6 +337,48 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Fun Stuff Section -->
+  <section class="bg-white text-gray-900 min-h-screen flex items-center px-6 py-24">
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 md:gap-12">
+
+      <!-- Left Column -->
+      <div class="flex justify-center items-center mb-12 md:mb-0">
+        <img src="meme.png" alt="Meme describing my life as a developer"
+          class="max-w-full h-auto object-cover rounded-lg shadow-lg" />
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex flex-col justify-center">
+        <h2 class="text-4xl font-bold mb-3">A Little Game:</h2>
+        <h3 class="text-4xl font-semibold italic mb-8 leading-relaxed">
+          "Guess which one of these is a lie..."
+        </h3>
+
+        <!-- List -->
+        <ul class="space-y-3 text-xl leading-relaxed">
+          <li>
+            <span class="font-semibold">1)</span> I once fixed a production bug
+            using just the terminal on my smartphone.
+          </li>
+          <li>
+            <span class="font-semibold">2)</span> I used to be a professional
+            skateboarder before learning to code.
+          </li>
+          <li>
+            <span class="font-semibold">3)</span> I have a private pilot’s license
+            and occasionally fly to weekend getaways.
+          </li>
+        </ul>
+
+        <!-- CTA -->
+        <p class="mt-8 text-2xl font-semibold">
+          <em>Take your best guess — I'll reveal the answer!</em>
+        </p>
+      </div>
+
     </div>
   </section>
 

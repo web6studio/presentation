@@ -28,6 +28,21 @@
     .image-filter:hover {
       filter: none;
     }
+
+    @keyframes pulseHighlight {
+
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+    }
+
+    .pulse-button {
+      animation: pulseHighlight 2s infinite ease-in-out;
+    }
   </style>
   <!-- Material Icons CDN -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -47,21 +62,26 @@
       <h1 class="text-6xl md:text-7xl font-semibold tracking-wide uppercase leading-tight">Nikita Kolos</h1>
       <p class="text-2xl md:text-3xl mt-10 font-light tracking-wide opacity-90">Software Engineer in Web & Mobile (9+
         years exp)</p>
-      <div class="flex items-center mt-10 space-x-3">
-        <svg class="w-7 h-7 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke="#fff">
+      <div class="flex items-center mt-6 space-x-2">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
-        <span class="text-2xl tracking-wide font-semibold">Germany, Munich</span>
+        <span class="text-xl tracking-wide">Germany, Munich</span>
       </div>
 
+      <!-- Open CV Button with custom pulse effect -->
+      <a href="Nikita_Kolos_CV_Senior_Frontend_Mobile.pdf" target="_blank"
+        class="mt-20 px-6 py-3 bg-white text-gray-700 text-lg font-bold rounded-lg shadow-lg hover:bg-gray-200 transition uppercase pulse-button">
+        Unlock CV
+      </a>
+
       <!-- Motto -->
-      <p class="text-3xl md:text-5xl italic mt-16 opacity-80 leading-relaxed">"Turning complexity into simplicity."</p>
+      <p class="text-3xl md:text-5xl italic mt-32 opacity-80 leading-relaxed">"Turning complexity into simplicity."</p>
 
       <!-- Scroll Down Indicator -->
-      <div class="absolute bottom-10 flex flex-col items-center animate-fade-in">
+      <div class="absolute bottom-8 flex flex-col items-center animate-fade-in">
         <span class="text-lg opacity-80 tracking-wide">Scroll down</span>
         <svg class="w-8 h-8 mt-3 animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
           stroke="currentColor">
@@ -354,25 +374,40 @@
       <!-- Right Column -->
       <div class="flex flex-col justify-center">
         <h2 class="text-4xl font-bold mb-3">A Little Game:</h2>
-        <h3 class="text-4xl font-semibold italic mb-8 leading-relaxed">
+        <h3 class="text-4xl font-semibold italic mb-4 leading-relaxed">
           "Guess which one of these is a lie..."
         </h3>
 
         <!-- List -->
-        <ul class="space-y-3 text-xl leading-relaxed">
+        <ul class="space-y-4 text-xl leading-relaxed">
           <li>
-            <span class="font-semibold">1)</span> I once built my own neural network
+            <span class="font-semibold pb-2 block">1) I once built my own neural network</span>
+            <span class="block text-gray-500 text-lg cursor-pointer blur-sm transition"
+              onclick="this.classList.remove('blur-sm')">
+              Yes, I built a neural network during university as part of a lab project. We created simple models that
+              approximated functions based on graph images to understand how neural networks work.
+            </span>
           </li>
           <li>
-            <span class="font-semibold">2)</span> I performed on German TV with a music band
+            <span class="font-semibold pb-2 block">2) I performed on German TV with a music band</span>
+            <span class="block text-gray-500 text-lg cursor-pointer blur-sm transition"
+              onclick="this.classList.remove('blur-sm')">
+              No! That’s not true. I haven’t performed on TV (yet), but I actively play gigs across different cities in
+              Germany with my band.
+            </span>
           </li>
           <li>
-            <span class="font-semibold">3)</span> I don't drink natural coffee
+            <span class="font-semibold pb-2 block">3) I don't drink natural coffee</span>
+            <span class="block text-gray-500 text-lg cursor-pointer blur-sm transition"
+              onclick="this.classList.remove('blur-sm')">
+              True. I stopped drinking natural coffee after a caffeine overdose at work. One exhausting day, I had seven
+              cups of extra-strong coffee, felt terrible, and since then, my body rejects its taste.
+            </span>
           </li>
         </ul>
 
         <!-- CTA -->
-        <p class="mt-8 text-2xl font-semibold">
+        <p class="mt-4 text-2xl font-semibold">
           <em>Take your best guess — I'll reveal the answer!</em>
         </p>
       </div>
